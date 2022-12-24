@@ -44,11 +44,6 @@ int main(){
     // We will think that f(x) is a ratioanal function 
     // Where the main element is in the power of n
 
-    std::cout << "Write n: "<< "\n";
-    int n;
-    std::cin >> n;
-    std::vector<double> coef(n + 1);
-    std::vector<int> pow(n + 1);
     std::cout << "Write (n + 1) coefficients: "<< "\n";
     for (size_t i = 0; i < n + 1; ++i) {
         std::cin >> coef[i];
