@@ -60,13 +60,17 @@ int main(){
     pthread_mutexattr_settype(&recursiveMutexAttributes, PTHREAD_MUTEX_RECURSIVE);
     pthread_mutex_init(&mutexFuel, &recursiveMutexAttributes);
 
-    int i;
     for (int i = 0; i < TREAD_NUM; ++i) {
         if (pthread_create(&th[i], NULL, count_space, NULL) != 0) {
             perror("Failed to create thread");
         }
     }
-
+    
+    for (int i = 0; i < THREAD_NUM; i++) {
+        if (pthread_join(th[i], NULL) != 0) {
+            perror("Failed to join thread");
+        }
+    }
     
     std::cout << res << "\n";
     
