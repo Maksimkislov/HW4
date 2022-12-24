@@ -52,7 +52,6 @@ int main(){
     }
     std::cout << "\n";
     std::cout << "result: \n";
-    double size = 0.0001;
 
 
     pthread_t th[TREAD_NUM];
