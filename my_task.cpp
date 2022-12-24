@@ -38,7 +38,6 @@ void* count_space(void* args) {
 
 
 int main(){
-    double west, east, north;
     std::cout << "Write length of west, east and north border:\n";
     std::cin >> west >> east >> north;
     // We will think that f(x) is a ratioanal function 
